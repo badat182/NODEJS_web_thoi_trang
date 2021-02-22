@@ -1,0 +1,43 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../font-awesome-pro-5.15.1/css/all.min.css">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 50px;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/cat/">ADMIN</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/cat/"><i class="far fa-home"></i> Trang chủ </a>
+      </div>
+    </div>
+  </div>
+</nav>
+ <!-- them danh muc san pham  -->
+<div class="container">
+
+<form class="col-6 border border-dark rounded p-3 m-auto" action="/cat/addcats" method="POST">
+    <div class="mb-3 col-12">
+      <label for="nameCat" class="form-label">Tên danh mục </label>
+      <input class="form-control" id="nameCat" name="nameCat">
+    </div>
+    <div class="mb-3 col-12">
+      <label for="order" class="form-label">Số lượng</label>
+      <input class="form-control" id="order" name="order">
+    </div>
+    <div class="form-group mb-3">
+        <label>Ẩn hiện</label>
+        <input type="radio" name="showHide" value="0" checked> Ẩn  &nbsp; &nbsp; 
+        <input type="radio" name="showHide" value="1"> Hiện 
+    </div>
+        
+    <div class="form-group mt-3 ">       
+        <button type="submit" class="btn btn-dark px-4  py-2 text-white"> SAVE DATABASE </button>
+    </div>
+
+  </form>
+
+</div>
+
+

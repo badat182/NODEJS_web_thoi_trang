@@ -1,0 +1,88 @@
+<h1>form them san pham</h1>
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../font-awesome-pro-5.15.1/css/all.min.css">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 50px;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/cat/">ADMIN</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/cat/"><i class="far fa-home"></i> Trang chủ </a>
+        <a class="nav-link" href="/cat/addnew"><i class="fal fa-layer-plus"></i> Thêm sản phẩm </a>
+      </div>
+    </div>
+  </div>
+</nav>
+ <!-- them danh muc san pham  -->
+<div class="container">
+<form class="col-6 border border-dark rounded p-3 m-auto" action="/cat/update_pro" method="POST">
+
+
+  <div class="mb-3 col-12">
+    <label for="id" class="form-label">ID</label>
+    <input class="form-control" id="id" name="id">
+  </div>
+
+    <div class="mb-3 col-12">
+      <label for="name" class="form-label">Tên sản phẩm </label>
+      <input class="form-control" id="name" name="name">
+    </div>
+
+    <div class="mb-3 col-12">
+        <label for="description" class="form-label">mo ta </label>
+        <input class="form-control" id="description" name="description" >
+      </div>
+
+      <div class="mb-3 col-12">
+        <label for="detail" class="form-label">chi tiet </label>
+        <input class="form-control" id="detail" name="detail">
+      </div>
+
+      <div class="mb-3 col-12">
+        <label for="gia" class="form-label"> gia </label>
+        <input class="form-control" id="gia" name="gia">
+      </div>
+
+      <div class="mb-3 col-12">
+        <label for="gg" class="form-label"> giam gia </label>
+        <input class="form-control" id="gg" name="gg">
+      </div>
+
+
+    <div class="mb-3 col-12">
+      <label for="sl" class="form-label">Số lượng đặt hàng</label>
+      <input class="form-control" id="sl" name="sl">
+    </div>
+
+    <div class="mb-3 col-12">
+        <label for="daban" class="form-label">Số lượng da ban</label>
+        <input class="form-control" id="daban" name="daban">
+      </div>
+
+      <div class="mb-3 col-12">
+        <label for="hinh" class="form-label">IMG</label>
+        <input type="image" class="form-control" id="hinh" name="hinh">
+      </div>
+
+      <div class="mb-3 col-12">
+        <label for="idCat" class="form-label">id Catalog</label>
+        <select name="idCat" id="idCat">
+          <% for(let cat of catalog) {%>
+            <option value="<%= cat.idCat %>"><h2><%= cat.nameCatalog %></h2></option>
+          <% } %>           
+        </select>
+      </div>
+    <div class="form-group mt-3 ">       
+        <button type="submit" class="btn btn-dark px-4  py-2 text-white"> SAVE san pham  </button>
+    </div>
+
+  </form>
+</div>
+
+
